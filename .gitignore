@@ -1,6 +1,6 @@
 env/
 old/
 __pycache__/
-.swp
+*.swp
 .vscode
 
