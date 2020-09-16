@@ -1,0 +1,6 @@
+env/
+old/
+__pycache__/
+.swp
+.vscode
+
