@@ -2,7 +2,7 @@ from imutils import contours
 from skimage import measure
 from numpy import interp
 import numpy as np
-import pigpio
+#import pigpio
 import time
 import cv2
 # import servos
@@ -20,9 +20,11 @@ tiltServo = 17
 panPos = 1500
 tiltPos = 1500
 
+"""
 servo = pigpio.pi()
 servo.set_servo_pulsewidth(panServo, panPos)
 servo.set_servo_pulsewidth(tiltServo, tiltPos)
+"""
 
 minMov = 1
 maxMov = 10
@@ -63,12 +65,12 @@ def func(x, y, w, h):
 
  	
     if not panPos > 2500 or not panPos < 550:
-        servo.set_servo_pulsewidth(panServo, panPos)
+        #servo.set_servo_pulsewidth(panServo, panPos)
         print('panServo: {}'.format(panPos))
 
     
     if not tiltPos > 2500 or tiltPos < 550:
-        servo.set_servo_pulsewidth(tiltServo, tiltPos)
+        #servo.set_servo_pulsewidth(tiltServo, tiltPos)
         print('tiltServo: {}'.format(tiltPos))
 
    
@@ -78,7 +80,12 @@ def func(x, y, w, h):
 while True:
     # Videodan veri oku
     ret, frame = cap.read()
-    frame = cv2.flip(frame, -1)
+    #frame = cv2.flip(frame, -1)
+
+    # düzgün çalışmıyor
+    #face_cascade = cv2.CascadeClassifier('xml/lbpcascade_frontalface_improved.xml')
+
+    face_cascade = cv2.CascadeClassifier('xml/haarcascade_frontalface_default.xml')
     
     # Our operations on the frame come here
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -87,26 +94,13 @@ while True:
     # Display the resulting frame
     for (x,y,w,h) in faces:
          func(x, y, w, h)
-         """
-         roi_gray = gray[y:y+h, x:x+w]
-         roi_color = frame[y:y+h, x:x+w]
-         eyes = eye_cascade.detectMultiScale(roi_gray)
-         for (ex,ey,ew,eh) in eyes:
-             cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-        """
-
-       """
-        if cv2.circle:
-            print("fire #{} detected: x: {}, y: {}".format((i+1), int(cX), int(cY)))
-        """
-
     # print('width, height: {}, {} '.format(width,height))
     # değerleri geri dön ya da direk olarak fonksiyon içinde kullan
     # return width, height
         # servos.Servos(width, height, int(cX), int(cY))
 
     # Display the resulting frame
-    # cv2.flip(frame, -1)
+    #cv2.flip(frame, -1)
     cv2.imshow('frame', frame)
     # cv2.imshow('frame', fgmask)
     if cv2.waitKey(1) & 0xFF == ord('q'):
