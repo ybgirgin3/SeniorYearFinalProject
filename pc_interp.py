@@ -64,12 +64,12 @@ def func(x, y, w, h):
 
  	
     if not panPos > 2500 or not panPos < 550:
-        servo.set_servo_pulsewidth(panServo, panPos)
+        #servo.set_servo_pulsewidth(panServo, panPos)
         print('panServo: {}'.format(panPos))
 
     
     if not tiltPos > 2500 or tiltPos < 550:
-        servo.set_servo_pulsewidth(tiltServo, tiltPos)
+        #servo.set_servo_pulsewidth(tiltServo, tiltPos)
         print('tiltServo: {}'.format(tiltPos))
 
    
@@ -79,7 +79,9 @@ def func(x, y, w, h):
 while True:
     # Videodan veri oku
     ret, frame = cap.read()
-    frame = cv2.flip(frame, -1)
+
+    # no need to flip camera while on pc
+    #frame = cv2.flip(frame, -1)
     
     ## get resolution of frame
     # TODO:
