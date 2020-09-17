@@ -1,4 +1,5 @@
 env/
+.venv/
 old/
 __pycache__/
 *.swp
