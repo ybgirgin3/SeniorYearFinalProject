@@ -1,3 +1,6 @@
+#
+# this is the pc version of the servo controlling
+#
 from imutils import contours
 from skimage import measure
 from numpy import interp
@@ -9,8 +12,6 @@ import cv2
 
 # open camera for capturing frames
 cap = cv2.VideoCapture(0)
-
-
 
 # servo pinleri
 panServo = 4
