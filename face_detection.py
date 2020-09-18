@@ -1,7 +1,7 @@
 import cv2
 
 #cap = cv2.VideoCapture(0)
-frame = cv2.imread('face.jpg')
+frame = cv2.imread('digital/img3.jpg')
 
 face_cascade = cv2.CascadeClassifier('xml/haarcascade_frontalface_default.xml')
 

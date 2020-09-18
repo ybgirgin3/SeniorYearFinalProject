@@ -8,7 +8,9 @@ import cv2
 # import servos
 
 # open camera for capturing frames
-cap = cv2.VideoCapture(0)
+# wsl cant open camera 
+#cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('digital/vid1.mp4')
 
 
 
