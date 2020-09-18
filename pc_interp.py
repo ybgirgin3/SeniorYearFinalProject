@@ -11,7 +11,7 @@ import cv2
 # import servos
 
 # open camera for capturing frames
-cap = cv2.VideoCapture('digital/vid1.mp4')
+cap = cv2.VideoCapture('digital/fire_vid.mp4')
 
 
 # servo pinleri
