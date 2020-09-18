@@ -11,7 +11,8 @@ import cv2
 # import servos
 
 # open camera for capturing frames
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cap = cv2.VideoCapture('digital/vid1.mp4')
+
 
 # servo pinleri
 panServo = 4

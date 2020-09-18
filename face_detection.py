@@ -20,6 +20,9 @@ for (x,y,w,h) in faces:
 	 cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
     """
 
-cv2.imwrite('frame.png',frame)
+#cv2.imwrite('frame.png',frame)
+cv2.imshow('frame.png',frame)
+cv2.waitKey(0)
+
 
 # When everything done, release the capture
