@@ -10,7 +10,7 @@ import time
 import cv2
 # import servos
 
-# open camera for capturing frames
+# read video frame by frame to find fire
 cap = cv2.VideoCapture('digital/fire_vid.mp4')
 
 
