@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #
 # this is the pc version of the servo controlling
 #
