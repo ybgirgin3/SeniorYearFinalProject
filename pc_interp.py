@@ -44,7 +44,7 @@ def func(x, y, w, h):
     cv2.putText(frame, "#{}".format(i+1), (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
 
     # we gonna calculate the distance pan tilt servos will go for.
-    # Flame far away from centre means servos will cover more distance
+    # if flame far away from centre means servos will go more distance
     # and flame near the centre means servos will go for less distance
     
     # If the pan and tilt servos position will be in 0 to 180 degrees (500=0 degree and 2500=180 degree)
@@ -57,7 +57,6 @@ def func(x, y, w, h):
     # int(x+(w/2)) < 280 means flame is on the left side of the frame
     elif int(x+(w/2)) < 280:
             panPos = int(panPos + interp(int(x+(w/2)), (280, 0), (minMov, maxMov)))
-
     
     if int(y+(h/2)) > 280:
             tiltPos = int(tiltPos + interp(int(y+(h/2)), (280, 480), (minMov, maxMov)))
