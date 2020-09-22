@@ -74,6 +74,7 @@ def func(x, y, w, h):
         #servo.set_servo_pulsewidth(tiltServo, tiltPos)
         print('tiltServo: {}'.format(tiltPos))
 
+
    
 
 
