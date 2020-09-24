@@ -4,4 +4,5 @@ old/
 __pycache__/
 *.swp
 .vscode
+digital/
 
