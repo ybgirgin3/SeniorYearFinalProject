@@ -13,6 +13,7 @@ import cv2
 
 # read video frame by frame to find fire
 cap = cv2.VideoCapture('digital/fire_vid.mp4')
+#cap = cv2.VideoCapture(0)
 
 
 # servo pinleri

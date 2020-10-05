@@ -10,6 +10,8 @@ import cv2
 # open camera for capturing frames
 # wsl cant open camera 
 #cap = cv2.VideoCapture(0)
+
+# this just for in ubuntu 
 cap = cv2.VideoCapture('digital/vid1.mp4')
 
 
