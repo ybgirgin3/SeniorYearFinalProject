@@ -8,6 +8,7 @@ import cv2
 # import servos
 
 # open camera for capturing frames
+
 cap = cv2.VideoCapture(0)
 
 
