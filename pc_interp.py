@@ -1,7 +1,5 @@
-#!/usr/bin/python3
-#
 # this is the pc version of the servo controlling
-#
+
 from imutils import contours
 from skimage import measure
 from numpy import interp
@@ -12,7 +10,7 @@ import cv2
 # import servos
 
 # read video frame by frame to find fire
-cap = cv2.VideoCapture('digital/fire_vid.mp4')
+cap = cv2.VideoCapture('digital/case2_car.mp4')
 #cap = cv2.VideoCapture(0)
 
 
@@ -74,10 +72,6 @@ def func(x, y, w, h):
     if not tiltPos > 2500 or tiltPos < 550:
         #servo.set_servo_pulsewidth(tiltServo, tiltPos)
         print('tiltServo: {}'.format(tiltPos))
-
-
-   
-
 
 
 while True:
