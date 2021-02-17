@@ -7,10 +7,12 @@ import numpy as np
 #import pigpio
 import time
 import cv2
+import sys
 # import servos
 
 # read video frame by frame to find fire
-cap = cv2.VideoCapture('digital/case2_car.mp4')
+# cap = cv2.VideoCapture('digital/case2_car.mp4')
+cap = cv2.VideoCapture(sys.argv[1])
 #cap = cv2.VideoCapture(0)
 
 
