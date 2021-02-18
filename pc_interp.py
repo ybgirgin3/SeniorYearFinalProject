@@ -130,10 +130,8 @@ while True:
         (cX, cY), radius = cv2.minEnclosingCircle(c)
  
         func(x, y, w, h)
-        """
         if cv2.circle:
             print("fire #{} detected: x: {}, y: {}".format((i+1), int(cX), int(cY)))
-        """
 
     # print('width, height: {}, {} '.format(width,height))
     # değerleri geri dön ya da direk olarak fonksiyon içinde kullan
